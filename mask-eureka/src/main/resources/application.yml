@@ -3,7 +3,7 @@ spring:
   application:
     name: mask-eureka
 server:
-  port: 8761
+  port: 8082
 eureka:
   client:
     # 表示是否将自己注册到Eureka Server上，默认为true

@@ -2,11 +2,11 @@ spring:
   application:
     name: mask-feign
 server:
-  port: 8765
+  port: 8083
 eureka:
   client:
     service-url:
-      default-zone: http://127.0.0.1:8761/eureka
+      default-zone: http://127.0.0.1:8082/eureka
 feign:
   hystrix:
     enabled: true

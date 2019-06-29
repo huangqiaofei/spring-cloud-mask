@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      default-zone: http://127.0.0.1:8761/eureka
+      default-zone: http://127.0.0.1:8082/eureka
 
 spring:
   datasource:
@@ -28,19 +28,19 @@ spring:
     port:  6379
     # redis访问密码（默认为空）
     password:
-    # redis连接池配置
-    pool:
-      # 最大可用连接数（默认为8，负数表示无限）
-      max-active: 8
-      # 从连接池中获取连接最大等待时间（默认为-1，单位为毫秒，负数表示无限）
-      max-wait: -1
-      # 最大空闲连接数（默认为8，负数表示无限）
-      max-idle: 8
-      # 最小空闲连接数（默认为0，该值只有为正数才有作用）
-      min-idle: 0
     # redis连接超时时间（单位为毫秒）
-    timeout: 1
-
+    jedis:
+      pool:
+        max-active:
+          # 最大可用连接数（默认为8，负数表示无限）
+                max-active: 8
+                # 从连接池中获取连接最大等待时间（默认为-1，单位为毫秒，负数表示无限）
+                max-wait: -1
+                # 最大空闲连接数（默认为8，负数表示无限）
+                max-idle: 8
+                # 最小空闲连接数（默认为0，该值只有为正数才有作用）
+                min-idle: 0
+    timeout: 2000ms
 logging:
   config: classpath:log4j2.xml
 

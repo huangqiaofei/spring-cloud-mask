@@ -10,5 +10,5 @@ spring:
   application:
     name: mask-consul
 server:
-  port: 8502
+  port: 8081
 

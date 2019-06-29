@@ -32,7 +32,7 @@ spring:
     password: guest
 
 server:
-  port: 8200
+  port: 8086
 
 
 

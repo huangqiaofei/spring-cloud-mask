@@ -17,13 +17,13 @@ spring:
     host: 127.0.0.1
     username: guest
 server:
-  port: 8100
+  port: 8085
 management:
   security:
     enabled: false
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://127.0.0.1:8082/eureka
 logging:
   config: classpath:log4j2.xml

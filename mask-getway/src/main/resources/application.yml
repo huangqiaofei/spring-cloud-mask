@@ -8,11 +8,11 @@ spring:
         enabled: true
 
 server:
-  port: 9090
+  port: 8084
 eureka:
   client:
     service-url:
-      default-zone: http://127.0.0.1:8761/eureka
+      default-zone: http://127.0.0.1:8082/eureka
 zuul:
   # 禁止服务自动添加
   ignored-services: '*'

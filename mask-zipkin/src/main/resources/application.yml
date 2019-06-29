@@ -2,11 +2,11 @@ spring:
   application:
     name: mask-zipkin
 server:
-  port: 9411
+  port: 8087
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://127.0.0.1:8082/eureka
 management:
   metrics:
     web:
