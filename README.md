@@ -22,9 +22,9 @@ Spring Cloud 全家桶：
 	mask-feign  服务调用中心</br>
 	mask-user   用户模板</br>
 	mask-order  订单模块</br>
-	....
-持续更新中…
-计划
+	....</br>
+持续更新中…</br>
+计划</br>
     1.加入分布式事务</br>
     2.加入springsecurity</br>
     3.加入搜索引擎</br>
