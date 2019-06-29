@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 @FeignClient(value = "mask-user")
-public interface CustomerService {
+public interface UserService {
 
     /**
      * 测试
@@ -24,5 +24,5 @@ public interface CustomerService {
      * @return String
      */
     @RequestMapping(value = "/test/result", method = RequestMethod.GET)
-    String testCustomer(@RequestParam(value = "text") String text);
+    String testUser(@RequestParam(value = "text") String text);
 }

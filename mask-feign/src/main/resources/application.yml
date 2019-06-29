@@ -11,8 +11,4 @@ feign:
   hystrix:
     enabled: true
 
-#turbine:
-#  app-config: service-customer
-#  combine-host-port: true
-#  cluster-name-expression: "'default'"
 

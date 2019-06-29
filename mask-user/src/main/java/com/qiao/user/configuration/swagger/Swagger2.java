@@ -47,7 +47,7 @@ public class Swagger2 {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("service-customer")
+                .title("mask-user")
                 .description("Demo project for Spring Boot")
                 .termsOfServiceUrl("")
                 .version("1.0")

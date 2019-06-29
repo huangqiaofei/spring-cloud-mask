@@ -1,7 +1,7 @@
 package com.qiao.feign.configuration.fallback;
 
 
-import com.qiao.feign.service.TestCustomerService;
+import com.qiao.feign.service.TestUserService;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
  * @date 2019-06-29
  */
 @Component
-public class HystrixClientFallback implements TestCustomerService {
+public class HystrixClientFallback implements TestUserService {
 
     @Override
-    public String testCustomer(String text) {
+    public String testUser(String text) {
         return "失败:" + text;
     }
 }

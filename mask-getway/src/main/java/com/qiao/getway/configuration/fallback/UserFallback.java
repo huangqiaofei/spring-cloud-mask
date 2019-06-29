@@ -17,13 +17,13 @@ import java.io.InputStream;
  * @email 244154988@qq.com
  */
 @Component
-public class CustomerFallback implements FallbackProvider {
+public class UserFallback implements FallbackProvider {
 
-    private static final String SERVICE_CUSTOMER = "mask-user";
+    private static final String MASK_USER = "mask-user";
 
     @Override
     public String getRoute() {
-        return SERVICE_CUSTOMER;
+        return MASK_USER;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class CustomerFallback implements FallbackProvider {
 
             @Override
             public InputStream getBody() {
-                return new ByteArrayInputStream(("The " + SERVICE_CUSTOMER + " is unavailable.").getBytes());
+                return new ByteArrayInputStream(("The " + MASK_USER + " is unavailable.").getBytes());
             }
 
             @Override

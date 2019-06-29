@@ -1,6 +1,6 @@
 package com.qiao.feign.controller;
 
-import com.qiao.feign.service.TestCustomerService;
+import com.qiao.feign.service.TestUserService;
 import com.qiao.feign.service.TestOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private TestCustomerService testCustomerService;
+    private TestUserService testUserService;
 
     @Autowired
     private TestOrderService testOrderService;
@@ -27,9 +27,9 @@ public class TestController {
         return text;
     }
 
-    @RequestMapping(value = "/customer", method = RequestMethod.GET)
-    public String getCustomer(@RequestParam(value = "text") String text) {
-        return testCustomerService.testCustomer(text);
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public String getUser(@RequestParam(value = "text") String text) {
+        return testUserService.testUser(text);
     }
 
     @RequestMapping(value = "/order", method = RequestMethod.GET)

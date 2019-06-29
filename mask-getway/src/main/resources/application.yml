@@ -18,7 +18,7 @@ zuul:
   ignored-services: '*'
   routes:
     api-a:
-      path: /customer/**
+      path: /user/**
       service-id: mask-user
     api-b:
       path: /order/**

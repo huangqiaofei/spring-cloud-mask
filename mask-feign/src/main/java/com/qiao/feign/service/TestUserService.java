@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 @FeignClient(value = "mask-user", fallback = HystrixClientFallback.class)
-public interface TestCustomerService {
+public interface TestUserService {
 
     /**
      * 测试
@@ -24,5 +24,5 @@ public interface TestCustomerService {
      * @return String
      */
     @RequestMapping(value = "/test/result", method = RequestMethod.GET)
-    String testCustomer(@RequestParam(value = "text") String text);
+    String testUser(@RequestParam(value = "text") String text);
 }

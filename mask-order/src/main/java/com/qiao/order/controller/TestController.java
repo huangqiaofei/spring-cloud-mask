@@ -1,7 +1,7 @@
 package com.qiao.order.controller;
 
 import com.qiao.order.common.message.Producer;
-import com.qiao.order.service.CustomerService;
+import com.qiao.order.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -28,7 +28,7 @@ import javax.annotation.Resource;
 public class TestController {
 
     @Autowired
-    private CustomerService customerService;
+    private UserService userService;
 
     @Bean
     @LoadBalanced
@@ -47,8 +47,8 @@ public class TestController {
 
     @ApiOperation(value = "测试服务链路追踪", notes = "测试服务链路追踪")
     @RequestMapping(value = "/zipkin", method = RequestMethod.GET)
-    public String testCustomer(@RequestParam(value = "text") String text) {
-        return restTemplate.getForObject("http://service-customer/test/result?text=" + text, String.class);
+    public String testUser(@RequestParam(value = "text") String text) {
+        return restTemplate.getForObject("http://mask-user/test/result?text=" + text, String.class);
     }
 
     @Resource
@@ -62,7 +62,7 @@ public class TestController {
 
     @ApiOperation(value = "测试服务间调用", notes = "测试服务间调用")
     @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public String testCustomerService(@RequestParam(value = "text") String text) {
-        return customerService.testCustomer(text);
+    public String testUserService(@RequestParam(value = "text") String text) {
+        return userService.testUser(text);
     }
 }
