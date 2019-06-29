@@ -24,6 +24,11 @@ Spring Cloud 全家桶：
 	mask-order  订单模块</br>
 	....
 持续更新中…
-
+计划
+    1.加入分布式事务
+    2.加入springsecurity
+    3.加入搜索引擎
+    4.高并发处理方案
+    …
 
 
