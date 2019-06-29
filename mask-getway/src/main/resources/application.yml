@@ -19,7 +19,7 @@ zuul:
   routes:
     api-a:
       path: /customer/**
-      service-id: service-customer
+      service-id: mask-user
     api-b:
       path: /order/**
       service-id: mask-order

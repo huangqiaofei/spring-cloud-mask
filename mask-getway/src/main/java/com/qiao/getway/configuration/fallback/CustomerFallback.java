@@ -1,6 +1,7 @@
 package com.qiao.getway.configuration.fallback;
 
-import org.springframework.cloud.netflix.zuul.filters.route.ZuulFallbackProvider;
+
+import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,9 +17,9 @@ import java.io.InputStream;
  * @email 244154988@qq.com
  */
 @Component
-public class CustomerFallback implements ZuulFallbackProvider {
+public class CustomerFallback implements FallbackProvider {
 
-    private static final String SERVICE_CUSTOMER = "mask-customer";
+    private static final String SERVICE_CUSTOMER = "mask-user";
 
     @Override
     public String getRoute() {
@@ -26,7 +27,7 @@ public class CustomerFallback implements ZuulFallbackProvider {
     }
 
     @Override
-    public ClientHttpResponse fallbackResponse() {
+    public ClientHttpResponse fallbackResponse(String route, Throwable cause) {
         return new ClientHttpResponse() {
             @Override
             public HttpStatus getStatusCode() {

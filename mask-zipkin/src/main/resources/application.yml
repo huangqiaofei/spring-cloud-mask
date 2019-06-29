@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: mask-zipkin
+server:
+  port: 9411
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

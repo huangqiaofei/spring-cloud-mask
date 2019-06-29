@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: mask-user
+  cloud:
+    config:
+      # 指定分支
+      label: master
+      # 指定环境
+      profile: dev
+      name: mask-user,mask-user-mysql,mask-user-redis
+      uri: http://127.0.0.1:1201/
+    bus:
+      # 开启总线
+      enabled: true
+      trace:
+        # 打开ack跟踪的标志（默认关闭）
+        enabled: true
+  profiles:
+    active: dev
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    sender:
+      type: rabbit
+    locator:
+      discovery:
+        enabled: true
+    enabled: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 8200
+
+
+
+

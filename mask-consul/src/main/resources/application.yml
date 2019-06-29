@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    consul:
+      port: 8500
+      discovery:
+        health-check-path: /health
+        instance-id: mask-consul
+        health-check-interval: 15s
+      host: http://127.0.0.1
+  application:
+    name: mask-consul
+server:
+  port: 8502
+
