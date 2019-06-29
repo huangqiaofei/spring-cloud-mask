@@ -15,13 +15,13 @@ Spring Cloud 全家桶：
     </table>
 </center>
 启动顺序 
-	mask-eureka 服务中心
-	mask-getway api网关
-	mask-consul 
-	mask-zipkin 日志分析
-	mask-feign  服务调用中心
-	mask-user   用户模板
-	mask-order  订单模块
+	mask-eureka 服务中心</tr>
+	mask-getway api网关</tr>
+	mask-consul </tr>
+	mask-zipkin 日志分析</tr>
+	mask-feign  服务调用中心</tr>
+	mask-user   用户模板</tr>
+	mask-order  订单模块</tr>
 	....
 	
 
