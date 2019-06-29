@@ -14,14 +14,14 @@ Spring Cloud 全家桶：
 	<tr><td width="300">批量任务</td><td width="500">Spring Cloud Task</td></tr>
     </table>
 </center>
-<tr>启动顺序 <tr>
-	<tr>mask-eureka 服务中心</tr>
-	<tr>mask-getway api网关</tr>
-	<tr>mask-consul </tr>
-	<tr>mask-zipkin 日志分析</tr>
-	<tr>mask-feign  服务调用中心</tr>
-	<tr>mask-user   用户模板</tr>
-	<tr>mask-order  订单模块</tr>
+启动顺序</br>
+	mask-eureka 服务中心</br>
+	mask-getway api网关</br>
+	mask-consul </br>
+	mask-zipkin 日志分析</br>
+	mask-feign  服务调用中心</br>
+	mask-user   用户模板</br>
+	mask-order  订单模块</br>
 	....
 	
 
