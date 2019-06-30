@@ -13,17 +13,11 @@ Spring Cloud 全家桶：
 	<tr><td width="300">数据流</td><td width="500">Spring Cloud Stream</td></tr>
 	<tr><td width="300">批量任务</td><td width="500">Spring Cloud Task</td></tr>
     </table>
-</center>
-启动顺序</br>
-	mask-eureka 服务中心</br>
-	mask-getway api网关</br>
-	mask-consul </br>
-	mask-zipkin 日志分析</br>
-	mask-feign  服务调用中心</br>
-	mask-user   用户模板</br>
-	mask-order  订单模块</br>
-	....
-	
 
-
-
+持续更新中…</br>
+计划</br>
+    1.加入分布式事务</br>
+    2.加入springsecurity</br>
+    3.加入搜索引擎</br>
+    4.高并发处理方案</br>
+    …</br> 
