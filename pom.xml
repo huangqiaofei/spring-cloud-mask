@@ -15,6 +15,7 @@
         <module>mask-consul</module>
         <module>mask-user</module>
         <module>mask-order</module>
+        <module>mask-config</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
