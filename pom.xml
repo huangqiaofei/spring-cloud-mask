@@ -4,8 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.qiao</groupId>
+    <groupId>com.qiao.mask</groupId>
     <artifactId>spring-cloud-mask</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>mask-getway</module>
@@ -16,6 +17,8 @@
         <module>mask-user</module>
         <module>mask-order</module>
         <module>mask-config</module>
+        <module>mask-common</module>
+
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
