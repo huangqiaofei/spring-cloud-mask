@@ -1,7 +1,6 @@
 package com.qiao.user.common;
 
-
-import com.qiao.user.common.constant.Code;
+import com.qiao.user.common.constant.ResultCode;
 
 /**
  * @author huangqf
@@ -19,7 +18,7 @@ public class BaseResultFactory {
      * @return
      */
     public static <T> BaseResult<T> createSuccessResult(Object data) {
-        return new BaseResult(Code.SUCCESS, data);
+        return new BaseResult(ResultCode.SUCCESS, data);
     }
 
     /**
@@ -28,6 +27,6 @@ public class BaseResultFactory {
      * @return
      */
     public static <T> BaseResult<T> createEmptyResult() {
-        return new BaseResult<>(Code.SUCCESS);
+        return new BaseResult<>(ResultCode.SUCCESS);
     }
 }

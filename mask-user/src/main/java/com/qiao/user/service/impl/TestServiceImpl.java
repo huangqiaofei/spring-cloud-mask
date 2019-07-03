@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qiao.user.common.BaseResult;
 import com.qiao.user.common.BaseResultFactory;
-import com.qiao.user.common.constant.Code;
+import com.qiao.user.common.constant.ResultCode;
 import com.qiao.user.common.exception.BusinessException;
 import com.qiao.user.converter.User2UserDtoMapper;
 import com.qiao.user.dao.UserDao;
@@ -42,7 +42,7 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public void testException(String text) throws BusinessException {
-        throw new BusinessException(Code.UNDEFINED);
+        throw new BusinessException(ResultCode.UNDEFINED);
     }
 
     @Override

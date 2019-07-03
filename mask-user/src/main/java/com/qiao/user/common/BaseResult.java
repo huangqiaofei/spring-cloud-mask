@@ -1,6 +1,6 @@
 package com.qiao.user.common;
 
-import com.qiao.user.common.constant.Code;
+import com.qiao.user.common.constant.ResultCode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -31,12 +31,12 @@ public final class BaseResult<T> {
         this.message = msg;
     }
 
-    public BaseResult(Code code) {
+    public BaseResult(ResultCode code) {
         this.code = code.getCode();
         this.message = code.getMsg();
     }
 
-    public BaseResult(Code code, T data) {
+    public BaseResult(ResultCode code, T data) {
         this.code = code.getCode();
         this.message = code.getMsg();
         this.data = data;

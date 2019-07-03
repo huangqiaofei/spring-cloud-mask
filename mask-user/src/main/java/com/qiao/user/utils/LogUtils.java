@@ -16,10 +16,11 @@ import java.io.StringWriter;
 
 public class LogUtils {
 
-    public static Log errorlog = LogFactory.getLog("error");
-    public static Log warnlog = LogFactory.getLog("warn");
-    public static Log infolog = LogFactory.getLog("info");
-    public static Log debuglog = LogFactory.getLog("debug");
+    public static final Log ERRORLOG = LogFactory.getLog("error");
+    public static final Log WARNLOG = LogFactory.getLog("warn");
+    public static final Log INFOLOG = LogFactory.getLog("info");
+    public static final Log DEBUGLOG = LogFactory.getLog("debug");
+
 
     public LogUtils() {
     }
@@ -34,9 +35,9 @@ public class LogUtils {
                 StringWriter sw = new StringWriter();
                 e.printStackTrace(new PrintWriter(sw, true));
                 String str = sw.toString();
-                errorlog.error(location + str);
+                ERRORLOG.error(location + str);
             } else {
-                errorlog.error(location + obj.toString());
+                ERRORLOG.error(location + obj.toString());
             }
         } catch (Exception var6) {
             var6.printStackTrace();
@@ -54,9 +55,9 @@ public class LogUtils {
                 StringWriter sw = new StringWriter();
                 e.printStackTrace(new PrintWriter(sw, true));
                 String str = sw.toString();
-                warnlog.warn(location + str);
+                WARNLOG.warn(location + str);
             } else {
-                warnlog.warn(location + obj.toString());
+                WARNLOG.warn(location + obj.toString());
             }
         } catch (Exception var6) {
             var6.printStackTrace();
@@ -74,9 +75,9 @@ public class LogUtils {
                 StringWriter sw = new StringWriter();
                 e.printStackTrace(new PrintWriter(sw, true));
                 String str = sw.toString();
-                infolog.info(location + str);
+                INFOLOG.info(location + str);
             } else {
-                infolog.info(location + obj.toString());
+                INFOLOG.info(location + obj.toString());
             }
         } catch (Exception var6) {
             var6.printStackTrace();
@@ -94,9 +95,9 @@ public class LogUtils {
                 StringWriter sw = new StringWriter();
                 e.printStackTrace(new PrintWriter(sw, true));
                 String str = sw.toString();
-                debuglog.debug(location + str);
+                DEBUGLOG.debug(location + str);
             } else {
-                debuglog.debug(location + obj.toString());
+                DEBUGLOG.debug(location + obj.toString());
             }
         } catch (Exception var6) {
             var6.printStackTrace();

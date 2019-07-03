@@ -1,7 +1,7 @@
 package com.qiao.user.common.exception;
 
 import com.qiao.user.common.BaseResult;
-import com.qiao.user.common.constant.Code;
+import com.qiao.user.common.constant.ResultCode;
 import lombok.NoArgsConstructor;
 
 /**
@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public final class BusinessException extends BaseException {
 
-    public BusinessException(Code code) {
+    public BusinessException(ResultCode code) {
         super(code.getCode(), code.getMsg());
     }
 

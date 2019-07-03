@@ -15,5 +15,5 @@ import java.io.Serializable;
 @NoArgsConstructor
 public abstract class BaseEntity implements Serializable {
 
-    private static final long serialVersionUID = -3510647608252836375L;
+    private static final long serialVersionUID = 1L;
 }

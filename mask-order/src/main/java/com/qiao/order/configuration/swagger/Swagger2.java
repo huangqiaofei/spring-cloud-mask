@@ -47,7 +47,6 @@ public class Swagger2 {
         return new ApiInfoBuilder()
                 .title("mask-order")
                 .description("Demo project for Spring Boot")
-                .termsOfServiceUrl("https://www.qiao.com")
                 .version("1.0")
                 .build();
     }
