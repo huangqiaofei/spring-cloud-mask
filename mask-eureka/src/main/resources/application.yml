@@ -3,13 +3,16 @@ spring:
   application:
     name: mask-eureka
 server:
-  port: 8082
+  port: 8761
 eureka:
   client:
     # 表示是否将自己注册到Eureka Server上，默认为true
     register-with-eureka: false
     # 表示是否从Eureka Server上获取注册信息，默认为true
     fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761
+
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${server.port}

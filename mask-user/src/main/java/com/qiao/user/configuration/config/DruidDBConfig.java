@@ -44,7 +44,7 @@ public class DruidDBConfig {
     @Value("${spring.datasource.druid.max-wait}")
     private int maxWait;
 
-    @Value("${spring.datasource.druid.filters}")
+    @Value("${spring.datasource.druid.filter}")
     private String filters;
 
     @Bean

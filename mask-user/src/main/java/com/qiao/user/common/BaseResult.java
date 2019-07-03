@@ -4,6 +4,8 @@ import com.qiao.user.common.constant.ResultCode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author huangqf
  * @date: 2019/6/29 15:12
@@ -15,7 +17,7 @@ import lombok.Data;
 @SuppressWarnings("unchecked")
 @Data
 @AllArgsConstructor
-public final class BaseResult<T> {
+public final class BaseResult<T> implements Serializable {
 
     private int code;
     private String message;

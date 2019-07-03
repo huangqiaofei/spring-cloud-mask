@@ -7,8 +7,8 @@ spring:
       label: master
       # 指定环境
       profile: dev
-      name: mask-user,mask-user-mysql,mask-user-redis
-      uri: http://127.0.0.1:1201/
+      name: service-customer,service-customer-mysql,service-customer-redis
+      uri: http://127.0.0.1:8088/
     bus:
       # 开启总线
       enabled: true
@@ -30,6 +30,9 @@ spring:
     port: 5672
     username: guest
     password: guest
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
 
 server:
   port: 8086

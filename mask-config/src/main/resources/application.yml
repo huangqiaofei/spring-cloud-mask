@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/huangqiaofei/spring-cloud-mask.git
+          uri: https://github.com/huangqiaofei/spring-cloud-mask/
           search-paths: config-qiao
           # 如果代码仓库是公开的，则不需要设置用户名和密码
           username:
