@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>common-core</artifactId>
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -59,18 +60,10 @@
         </dependency>
 
         <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.arronlong.httpclientutil</groupId>
-            <artifactId>httpclientutil</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.qiao.mask</groupId>
             <artifactId>common-base</artifactId>
             <version>1.0-SNAPSHOT</version>
+
         </dependency>
 
         <dependency>
@@ -86,5 +79,6 @@
         </dependency>
 
     </dependencies>
+
 
 </project>

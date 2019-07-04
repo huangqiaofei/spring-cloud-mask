@@ -1,3 +1,4 @@
+/*
 package com.qiao.mask.user.interceptor.log;
 
 import com.qiao.mask.user.utils.LogUtils;
@@ -11,13 +12,15 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 
+*/
 /**
  * @author huangqf
  * @date 2018-09-28 下午2:29
  * @date: 2019/6/29 15:12
  * <p>
  * 日志切面
- */
+ *//*
+
 
 @Component
 @Aspect
@@ -45,3 +48,4 @@ public class ServiceLogAOP {
         return joinPoint.proceed();
     }
 }
+*/

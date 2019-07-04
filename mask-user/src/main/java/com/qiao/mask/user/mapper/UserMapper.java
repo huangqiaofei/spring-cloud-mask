@@ -1,9 +1,10 @@
 package com.qiao.mask.user.mapper;
 
 import com.qiao.mask.user.model.entity.UserEntity;
-import com.sun.tools.javac.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 
 /**

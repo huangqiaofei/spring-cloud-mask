@@ -1,6 +1,8 @@
 package com.qiao.mask.user.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.qiao.mask.common.core.annotation.LogAnnotation;
+import com.qiao.mask.common.core.annotation.ValidateAnnotation;
 import com.qiao.mask.user.common.BaseResult;
 import com.qiao.mask.user.model.dto.UserDto;
 import com.qiao.mask.user.model.entity.UserEntity;
@@ -44,6 +46,7 @@ public class TestController {
 
     @ApiOperation(value = "返回用户输入的结果", notes = "返回用户输入的结果")
     @RequestMapping(value = "/result", method = RequestMethod.GET)
+    @LogAnnotation
     public String test(@ApiParam(value = "测试内容", required = true) @RequestParam(value = "text") String text) {
         return testService.test(text);
     }

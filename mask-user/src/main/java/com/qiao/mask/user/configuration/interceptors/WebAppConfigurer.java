@@ -1,3 +1,4 @@
+/*
 package com.qiao.mask.user.configuration.interceptors;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
@@ -12,13 +13,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import java.util.List;
 
+*/
 /**
  * @author huangqf
  * @date: 2019/6/29 15:12
  * mail: 244154988@qq.com
  * <p>
  * 配置自定义拦截器
- */
+ *//*
+
 
 @Configuration
 public class WebAppConfigurer extends WebMvcConfigurerAdapter {
@@ -55,3 +58,4 @@ public class WebAppConfigurer extends WebMvcConfigurerAdapter {
     }
 
 }
+*/

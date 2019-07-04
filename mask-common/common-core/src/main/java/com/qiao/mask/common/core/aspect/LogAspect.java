@@ -64,7 +64,7 @@ public class LogAspect {
      */
     @AfterReturning(pointcut = "logAnnotation()", returning = "returnValue")
     public void doAfter(final JoinPoint joinPoint, final Object returnValue) {
-        //TODO 请求校验正确
+        System.out.println("呵呵呵呵或我被执行了");
         this.handleLog(joinPoint, "");
 
     }
@@ -98,7 +98,7 @@ public class LogAspect {
             operationLogDto.setRequestUrl(requestURI);
             getControllerMethodDescription(relog, new OperationLogDto(), result, joinPoint);
             threadLocal.remove();
-            taskExecutor.execute(() -> this.restTemplate.postForObject("", "", Integer.class));
+            //taskExecutor.execute(() -> this.restTemplate.postForObject("", "", Integer.class));
         } catch (Exception ex) {
             log.error("获取注解类出现异常={}", ex.getMessage(), ex);
         }

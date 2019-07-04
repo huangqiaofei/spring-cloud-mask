@@ -1,3 +1,4 @@
+/*
 package com.qiao.mask.user.interceptor;
 
 import com.qiao.mask.user.utils.LogUtils;
@@ -7,11 +8,13 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+*/
 /**
  * @author huangqf
  * @date: 2019/6/29 15:12
  * mail: 244154988@qq.com
- */
+ *//*
+
 
 @Component
 public class MonitorInterceptor implements HandlerInterceptor {
@@ -32,3 +35,4 @@ public class MonitorInterceptor implements HandlerInterceptor {
         LogUtils.info("耗时: " + (System.currentTimeMillis() - (long) httpServletRequest.getAttribute("startTime")) + "ms");
     }
 }
+*/

@@ -38,7 +38,7 @@ public class Swagger2 {
 
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.qiao.user.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.qiao.mask.user.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .globalOperationParameters(pars)
