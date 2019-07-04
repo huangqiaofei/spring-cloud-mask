@@ -1,6 +1,9 @@
 
 Spring Cloud 全家桶：
 
+架构图：
+![Image text](https://github.com/huangqiaofei/img-folder/blob/master/img/Framework.jpg)
+
 <center>
     <table width="800">
 	<tr><td width="300">服务注册中心</td><td width="500">Spring Cloud Netflix Eureka</td></tr>
