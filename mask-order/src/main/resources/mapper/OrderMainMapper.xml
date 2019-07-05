@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiao.mask.order.mapper.OrderMainMapper">
+  <resultMap id="BaseResultMap" type="com.qiao.mask.order.domain.entity.OrderMainDO">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="order_no" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="order_status" javaType="java.lang.Byte" jdbcType="TINYINT" />
+      <arg column="payment" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+      <arg column="user_id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="shipping_id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="payment_type" javaType="java.lang.Byte" jdbcType="TINYINT" />
+      <arg column="create_date" javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="payment_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, order_no, order_status, payment, user_id, shipping_id, payment_type, create_date, 
+    payment_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from order_main
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from order_main
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.qiao.mask.order.domain.entity.OrderMainDO">
+    insert into order_main (id, order_no, order_status, 
+      payment, user_id, shipping_id, 
+      payment_type, create_date, payment_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{orderNo,jdbcType=VARCHAR}, #{orderStatus,jdbcType=TINYINT}, 
+      #{payment,jdbcType=DECIMAL}, #{userId,jdbcType=BIGINT}, #{shippingId,jdbcType=BIGINT}, 
+      #{paymentType,jdbcType=TINYINT}, #{createDate,jdbcType=DATE}, #{paymentTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.qiao.mask.order.domain.entity.OrderMainDO">
+    insert into order_main
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="orderNo != null">
+        order_no,
+      </if>
+      <if test="orderStatus != null">
+        order_status,
+      </if>
+      <if test="payment != null">
+        payment,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="shippingId != null">
+        shipping_id,
+      </if>
+      <if test="paymentType != null">
+        payment_type,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="paymentTime != null">
+        payment_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="orderNo != null">
+        #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderStatus != null">
+        #{orderStatus,jdbcType=TINYINT},
+      </if>
+      <if test="payment != null">
+        #{payment,jdbcType=DECIMAL},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="shippingId != null">
+        #{shippingId,jdbcType=BIGINT},
+      </if>
+      <if test="paymentType != null">
+        #{paymentType,jdbcType=TINYINT},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=DATE},
+      </if>
+      <if test="paymentTime != null">
+        #{paymentTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qiao.mask.order.domain.entity.OrderMainDO">
+    update order_main
+    <set>
+      <if test="orderNo != null">
+        order_no = #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderStatus != null">
+        order_status = #{orderStatus,jdbcType=TINYINT},
+      </if>
+      <if test="payment != null">
+        payment = #{payment,jdbcType=DECIMAL},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="shippingId != null">
+        shipping_id = #{shippingId,jdbcType=BIGINT},
+      </if>
+      <if test="paymentType != null">
+        payment_type = #{paymentType,jdbcType=TINYINT},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=DATE},
+      </if>
+      <if test="paymentTime != null">
+        payment_time = #{paymentTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qiao.mask.order.domain.entity.OrderMainDO">
+    update order_main
+    set order_no = #{orderNo,jdbcType=VARCHAR},
+      order_status = #{orderStatus,jdbcType=TINYINT},
+      payment = #{payment,jdbcType=DECIMAL},
+      user_id = #{userId,jdbcType=BIGINT},
+      shipping_id = #{shippingId,jdbcType=BIGINT},
+      payment_type = #{paymentType,jdbcType=TINYINT},
+      create_date = #{createDate,jdbcType=DATE},
+      payment_time = #{paymentTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

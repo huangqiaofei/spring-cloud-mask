@@ -18,6 +18,7 @@
         <module>mask-order</module>
         <module>mask-config</module>
         <module>mask-common</module>
+        <module>mask-generator</module>
 
     </modules>
     <parent>
