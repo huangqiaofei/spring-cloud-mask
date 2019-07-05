@@ -3,7 +3,7 @@ package com.qiao.mask.common.utils.exception;
 
 /**
  * @author huangqf
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 public class HttpAesException extends IllegalArgumentException {
 	private static final long serialVersionUID = -2489600753056921095L;

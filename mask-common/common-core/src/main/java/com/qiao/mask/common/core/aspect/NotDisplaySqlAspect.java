@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author huangqf
  * @description:
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 @Aspect
 @Component

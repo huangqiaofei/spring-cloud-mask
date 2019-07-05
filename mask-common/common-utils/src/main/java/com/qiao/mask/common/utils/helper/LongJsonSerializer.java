@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * @description Long 类型字段序列化时转为字符串，避免js丢失精度
  * @author huangqf
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 public class LongJsonSerializer extends JsonSerializer<Long> {
 	/**

@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * @author huangqf
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

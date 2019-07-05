@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * @description:
  * @author huangqf
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 @Data
 public class Query implements Serializable {

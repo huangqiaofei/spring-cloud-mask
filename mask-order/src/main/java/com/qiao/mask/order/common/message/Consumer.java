@@ -7,7 +7,7 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 /**
  * @author huangqf
  * @date: 2019/6/29 15:12
- * email: 244154988@qq.com
+ * email: mr.huangqf@gmail.com
  */
 
 @Slf4j

@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author huangqf
  * @date: 2019/6/29 15:12
- * email: 244154988@qq.com
+ * email: mr.huangqf@gmail.com
  */
 
 @Mapper(componentModel = "spring")

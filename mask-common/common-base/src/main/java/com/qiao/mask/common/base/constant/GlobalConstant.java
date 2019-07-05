@@ -3,7 +3,7 @@ package com.qiao.mask.common.base.constant;
 /**
  * @author huangqf
  * @description:
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 public class GlobalConstant {
 

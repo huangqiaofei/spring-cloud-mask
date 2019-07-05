@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * @description:
  * @author huangqf
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DateUtil {

@@ -5,7 +5,7 @@ import com.qiao.mask.order.domain.entity.OrderMainDO;
 /**
  * @author huangqf
  * @date: 2019/7/5 17:16
- * mail: 244154988@qq.com
+ * mail: mr.huangqf@gmail.com
  */
 public interface OrderMainMapper {
 

@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  * @author huangqf
  * @date: 2019/6/29 14:28
  * @description:
- * @email 244154988@qq.com
+ * @email mr.huangqf@gmail.com
  */
 @SpringBootApplication
 @EnableEurekaClient

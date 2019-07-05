@@ -6,7 +6,7 @@ import com.qiao.mask.user.model.entity.UserEntity;
 /**
  * @author huangqf
  * @date: 2019/6/29 15:12
- * mail: 244154988@qq.com
+ * mail: mr.huangqf@gmail.com
  */
 
 public interface UserDao {

@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * @author huangqf
  * @date: 2019/7/5 17:15
- * mail: 244154988@qq.com
+ * mail: mr.huangqf@gmail.com
  */
 @Data
 public class OrderMainDO {

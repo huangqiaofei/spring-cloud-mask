@@ -8,7 +8,7 @@ import java.io.UnsupportedEncodingException;
 /**
  * @author huangqf
  * @description: url转码、解码
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 @Slf4j
 public class UrlUtil {

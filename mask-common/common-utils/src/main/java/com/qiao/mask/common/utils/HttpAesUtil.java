@@ -15,7 +15,7 @@ import java.security.MessageDigest;
 /**
  * @description:
  * @author huangqf
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 @Slf4j
 @NoArgsConstructor(access = AccessLevel.PRIVATE)

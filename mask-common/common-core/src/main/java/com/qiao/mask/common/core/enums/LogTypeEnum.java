@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * @author huangqf
  * @description:
- * @mail: 244154988@qq.com
+ * @mail: mr.huangqf@gmail.com
  */
 public enum LogTypeEnum {
 	/**

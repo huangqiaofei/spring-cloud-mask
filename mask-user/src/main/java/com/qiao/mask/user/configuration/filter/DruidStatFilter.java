@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebInitParam;
 /**
  * @author huangqf
  * @date: 2019/6/29 15:12
- * mail: 244154988@qq.com
+ * mail: mr.huangqf@gmail.com
  * <p>
  * druid过滤器
  */
