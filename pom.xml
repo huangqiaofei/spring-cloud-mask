@@ -19,6 +19,7 @@
         <module>mask-config</module>
         <module>mask-common</module>
         <module>mask-generator</module>
+        <module>mask-lcn</module>
 
     </modules>
     <parent>
