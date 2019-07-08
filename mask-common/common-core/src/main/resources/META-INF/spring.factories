@@ -3,4 +3,4 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 com.qiao.mask.common.config.CoreConfiguration,\
 com.qiao.mask.common.core.aspect.LogAspect,\
 com.qiao.mask.common.core.aspect.BindingResultAop,\
-com.qiao.mask.common.core.aspect.NotDisplaySqlAspect,
+com.qiao.mask.common.core.aspect.NotDisplaySqlAspect

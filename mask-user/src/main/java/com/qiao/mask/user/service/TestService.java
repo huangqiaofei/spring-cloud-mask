@@ -87,4 +87,7 @@ public interface TestService {
      * @return BaseResult<UserEntity>
      */
     BaseResult<UserEntity> updateUser(String id, String name, String birth);
+
+    Boolean testTransaction(String name, String birth);
+
 }

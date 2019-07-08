@@ -52,6 +52,9 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: count=countSql
+tx-lcn:
+  client:
+    manager-address: 127.0.0.1:8070
 
 
 

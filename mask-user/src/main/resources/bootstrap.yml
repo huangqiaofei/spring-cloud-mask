@@ -2,13 +2,13 @@ spring:
   application:
     name: mask-user
   cloud:
-    config:
+   # config:
       # 指定分支
-      label: master
+    #  label: master
       # 指定环境
-      profile: dev
-      name: mask-user,mask-user-mysql,mask-user-redis
-      uri: http://127.0.0.1:8088/
+     # profile: dev
+      #name: mask-user,mask-user-mysql,mask-user-redis
+      #uri: http://127.0.0.1:8088/
     bus:
       # 开启总线
       enabled: true

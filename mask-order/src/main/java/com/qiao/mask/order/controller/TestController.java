@@ -1,6 +1,7 @@
 package com.qiao.mask.order.controller;
 
 import com.qiao.mask.order.common.message.Producer;
+import com.qiao.mask.order.service.OrderService;
 import com.qiao.mask.order.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -30,14 +31,11 @@ public class TestController {
     @Autowired
     private UserService userService;
 
-    @Bean
-    @LoadBalanced
-    RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
+    @Autowired
+    private OrderService orderService;
 
     @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
     @ApiOperation(value = "返回用户输入的结果", notes = "返回用户输入的结果")
     @RequestMapping(value = "/result", method = RequestMethod.GET)
@@ -64,5 +62,11 @@ public class TestController {
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String testUserService(@RequestParam(value = "text") String text) {
         return userService.testUser(text);
+    }
+
+    @ApiOperation(value = "测试分布式事物", notes = "测试服务间调用")
+    @RequestMapping(value = "/testTransaction", method = RequestMethod.POST)
+    public Boolean testTransaction() {
+        return orderService.testTransaction();
     }
 }

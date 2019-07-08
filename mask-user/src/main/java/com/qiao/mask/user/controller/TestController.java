@@ -2,7 +2,6 @@ package com.qiao.mask.user.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.qiao.mask.common.core.annotation.LogAnnotation;
-import com.qiao.mask.common.core.annotation.ValidateAnnotation;
 import com.qiao.mask.user.common.BaseResult;
 import com.qiao.mask.user.model.dto.UserDto;
 import com.qiao.mask.user.model.entity.UserEntity;
@@ -11,7 +10,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -32,13 +30,13 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value = "测试", description = "测试模块", position = 1)
 public class TestController {
 
-    @Value("${profile}")
+    //@Value("${profile}")
     private String profile;
 
-    @Value("${mysql}")
+    // @Value("${mysql}")
     private String mysql;
 
-    @Value("${redis}")
+    // @Value("${redis}")
     private String redis;
 
     @Autowired
@@ -111,5 +109,13 @@ public class TestController {
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public BaseResult<UserEntity> updateUser(@RequestParam(value = "id") String id, @RequestParam(value = "name") String name, @RequestParam(value = "birth", required = false) String birth) {
         return testService.updateUser(id, name, birth);
+    }
+
+    @ApiOperation(value = "测试分布式实付", notes = "更新一条用户数据")
+    @RequestMapping(value = "/testTransaction", method = RequestMethod.GET)
+    public Boolean testTransaction() {
+        String name = "huangqf";
+        String birth = "1995-08-24";
+        return testService.testTransaction(name, birth);
     }
 }

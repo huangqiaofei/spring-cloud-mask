@@ -40,6 +40,7 @@ public class BindingResultAop {
 	 *
 	 * @param joinPoint the join point
 	 */
+
 	@AfterReturning(pointcut = "validateAnnotation()")
 	public void doAfter(final JoinPoint joinPoint) {
 		String methodName = joinPoint.getSignature().getName();

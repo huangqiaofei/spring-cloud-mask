@@ -1,5 +1,6 @@
 package com.qiao.mask.user.service.impl;
 
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qiao.mask.user.common.BaseResult;
@@ -7,7 +8,6 @@ import com.qiao.mask.user.common.BaseResultFactory;
 import com.qiao.mask.user.common.constant.ResultCode;
 import com.qiao.mask.user.common.exception.BusinessException;
 import com.qiao.mask.user.converter.User2UserDtoMapper;
-import com.qiao.mask.user.dao.UserDao;
 import com.qiao.mask.user.mapper.UserMapper;
 import com.qiao.mask.user.model.dto.UserDto;
 import com.qiao.mask.user.model.entity.UserEntity;
@@ -32,8 +32,6 @@ public class TestServiceImpl implements TestService {
     @Autowired
     private UserMapper userMapper;
 
-    @Autowired
-    private UserDao userDao;
 
     @Override
     public String test(String text) {
@@ -58,7 +56,7 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public BaseResult<UserEntity> testRedis(String id) {
-        return BaseResultFactory.createSuccessResult(userDao.findUser(id));
+        return BaseResultFactory.createSuccessResult(userMapper.findUserById(id));
     }
 
     @Override
@@ -83,7 +81,7 @@ public class TestServiceImpl implements TestService {
         UserEntity user = new UserEntity();
         user.setName(name);
         user.setBirth(birth);
-        return BaseResultFactory.createSuccessResult(userDao.insertUser(user));
+        return BaseResultFactory.createSuccessResult(userMapper.insertUser(user));
     }
 
     @Override
@@ -93,6 +91,15 @@ public class TestServiceImpl implements TestService {
         user.setId(id);
         user.setName(name);
         user.setBirth(birth);
-        return BaseResultFactory.createSuccessResult(userDao.updateUser(user));
+        return BaseResultFactory.createSuccessResult(userMapper.updateUser(user));
+    }
+
+    @Override
+    @LcnTransaction //分布式事务注解
+    @Transactional  //本地事务注解
+    public Boolean testTransaction(String name, String birth) {
+        this.addUser(name, birth);
+        return true;
+
     }
 }
