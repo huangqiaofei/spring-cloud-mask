@@ -1,4 +1,3 @@
-
 spring:
   application:
     name: mask-gateway
@@ -17,10 +16,13 @@ zuul:
   # 禁止服务自动添加
   ignored-services: '*'
   routes:
-    api-a:
+    api-auth:
+      path: /auth/**
+      service-id: mask-auth
+    api-user:
       path: /user/**
       service-id: mask-user
-    api-b:
+    api-order:
       path: /order/**
       service-id: mask-order
   # 开启重试功能
@@ -30,3 +32,15 @@ zuul:
 #      path: /feign/**
 #      # 由网关分发到feign，再经feign负载均衡
 #      service-id: mask-feign
+
+# 安全相关配置
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8089/oauth/token
+      user-authorization-uri: http://localhost:8089/oauth/authorize
+      client-id: client
+      client-secret: clientSecret
+    resource:
+      jwt:
+        key-value: ""

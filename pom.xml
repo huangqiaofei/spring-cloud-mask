@@ -20,6 +20,7 @@
         <module>mask-common</module>
         <module>mask-generator</module>
         <module>mask-lcn</module>
+        <module>mask-auth</module>
 
     </modules>
     <parent>
