@@ -1,0 +1,17 @@
+spring:
+  cloud:
+  zipkin:
+    base-url: http://127.0.0.1:9411
+  application:
+    name: mask-auth
+server:
+  port: 8089
+#management:
+#  security:
+#    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+logging:
+  config: classpath:log4j2.xml
